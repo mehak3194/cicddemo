@@ -33,7 +33,5 @@ pipeline {
    
   }
 
-  tools {
-    maven 'Maven 3.0.0'
-  }
+
 }
