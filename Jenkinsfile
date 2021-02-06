@@ -24,7 +24,7 @@ pipeline {
      stage('Deploy Development') {
       environment {
         ENVIRONMENT = 'Sandbox'
-        APP_NAME = 'sandbox-democicd'
+        APP_NAME = 'sandbox-democicdTest2'
       }
       steps {
             bat 'mvn -U -V -e -B -DskipTests deploy -DmuleDeploy -Dmule.version="%MULE_VERSION%" -Danypoint.username="%DEPLOY_CREDS_USR%" -Danypoint.password="%DEPLOY_CREDS_PSW%" -Dcloudhub.app="%APP_NAME%" -Dcloudhub.environment="%ENVIRONMENT%" -Dcloudhub.bg="%BG%" -Dcloudhub.worker="%WORKER%"'
